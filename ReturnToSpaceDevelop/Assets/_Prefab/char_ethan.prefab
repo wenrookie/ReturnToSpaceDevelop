@@ -985,6 +985,7 @@ GameObject:
   - component: {fileID: 4262120921256312}
   - component: {fileID: 20287853619052764}
   - component: {fileID: 81413199708864596}
+  - component: {fileID: 114971878524297964}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1226,6 +1227,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4520354357875282}
   - component: {fileID: 95254913602610220}
+  - component: {fileID: 54621180627929218}
+  - component: {fileID: 136558365709919202}
+  - component: {fileID: 114752464385705592}
   m_Layer: 0
   m_Name: char_ethan
   m_TagString: Untagged
@@ -1693,8 +1697,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1830105235434764}
-  m_LocalRotation: {x: -0.21346773, y: 0.6675013, z: -0.2089055, w: -0.6820792}
-  m_LocalPosition: {x: 3.1189382, y: 3.894215, z: -0.09876767}
+  m_LocalRotation: {x: -0.10486634, y: 0.66752845, z: -0.09577208, w: -0.73091495}
+  m_LocalPosition: {x: 2.4585004, y: 2.7974718, z: -0.2880347}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4520354357875282}
@@ -1965,7 +1969,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1959863871982674}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4462130436236268}
@@ -2605,6 +2609,21 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!54 &54621180627929218
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1959863871982674}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!81 &81413199708864596
 AudioListener:
   m_ObjectHideFlags: 1
@@ -2630,6 +2649,54 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114752464385705592
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1959863871982674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76660978c884dbf479e5e45b9ae61cd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+--- !u!114 &114971878524297964
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1830105235434764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8064c24368c62af488b20379e862472e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity0fX: 5
+  sensitivity0fY: 5
+  sensitivity0fScorllwheel: 5
+  rotateSpeed: 10
+  translateSpeed: 0
+  lookTargt: {fileID: 4520354357875282}
+  minLimitAngleX: -360
+  maxLimitAngleX: 360
+  minLimitAngleY: -180
+  maxLimitAngleY: 180
+  minLimitDistance: 2
+  maxLimitDistance: 10
+--- !u!136 &136558365709919202
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1959863871982674}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!137 &137325685520541220
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
