@@ -85,12 +85,12 @@ public class CameraControl : MonoBehaviour
     /// <summary>
     /// 摄像机距离观察点最小距离
     /// </summary>
-    public float minLimitDistance = 2f;
+    public float minLimitDistance = 0f;
 
     /// <summary>
     /// 摄像机距离观察点最大距离
     /// </summary>
-    public float maxLimitDistance = 10f;
+    public float maxLimitDistance = 50f;
 
     private void Start()
     {
